@@ -1,0 +1,42 @@
+﻿@model IEnumerable<wool.Model.Comment>
+
+@{
+    ViewBag.Title = "Getcomments";
+    Layout = "~/_LayoutPage1.cshtml";
+}
+
+<div class="right_cont">
+    <ul class="breadcrumb">
+        当前位置：
+        首页
+        <span class="divider">/</span>
+        业务处理
+        <span class="divider">/</span>
+        评论检查
+    </ul>
+
+    <div class="title_right"><span class="pull-right margin-bottom-5"><a class="btn btn-info btn-small" id="modal-9735581" href="#modal-container-9735581" role="button" data-toggle="modal"><i class="icon-plus icon-white"></i> 添加资讯</a></span><strong>资讯列表</strong></div>
+    <table class="table table-bordered table-striped table-hover">
+        <tbody>
+            <tr align="center">
+                <td nowrap="nowrap"><strong>评论内容</strong></td>
+                <td nowrap="nowrap"><strong>发布用户</strong></td>
+                <td nowrap="nowrap"><strong>发布时间</strong></td>
+                <td width="80" nowrap="nowrap"><strong> 操作 </strong></td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr align="center">
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.contents)</td>
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item._User.nickname)</td>
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.createdAt)</td>
+                    <td nowrap="nowrap"><a href="@Url.Action("DeleteComment",new {objectId=item.objectId })">删除</a> </td>
+                </tr>}
+        </tbody>
+    </table>
+    <table class="margin-bottom-20 table  no-border">
+        <tr>
+            @*<td class="text-center"><input type="button" value="打印" class="btn btn-info" style="width:80px;" /></td>*@
+        </tr>
+    </table>
+</div>

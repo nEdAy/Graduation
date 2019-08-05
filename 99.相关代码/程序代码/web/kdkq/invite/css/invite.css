@@ -1,0 +1,78 @@
+.container {
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    background: url("../img/background.jpg") no-repeat;
+}
+
+.container header h1 {
+    font-size: 30px;
+    text-align: center;
+    padding: 30px 0 120px 0;
+    color: #fff;
+}
+
+.container header p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.invite-people {
+    color: orange;
+}
+
+.container section {
+    width: inherit;
+}
+
+.container form label {
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+}
+.input {
+    display: block;
+    margin:0 auto;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px 0px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.code {
+    width: 45%;
+    display: inline-block;
+}
+
+.getCode {
+    width: 50%;
+    font-size: 15px;
+    padding: 21px 20px;
+    overflow: hidden;
+    white-space:nowrap;
+    float: right;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.register {
+    width: 100%;
+    font-size: 20px;
+    padding: 18px 20px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin: 10px 0 100px 0;
+    background: #fd5353;
+}
+
+.tip {
+    color: red;
+}
+
+.disabled {
+    background: #eee;
+}

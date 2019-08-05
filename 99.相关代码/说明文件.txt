@@ -1,0 +1,93 @@
+
+一、程序安装：
+本程序在调试时已自动生成了APK安装包，其目录为：
+10103101白骏\软件\程序代码\LiCaiTools1.0\bin\LiCaiTools1.0.apk 
+将其拷贝到安卓设备SD卡内，在设备的文件管理器中点击该文件便可实现安装。
+
+
+二、程序开发环境的搭建：
+
+（一）下载必须要使用的软件
+
+1. JDK 8（目前最新：Java SE 8u5）
+官方下载：http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+2. Android SDK（目前最新：android-sdk_r22.3）
+官方下载：http://developer.android.com/sdk/index.html
+
+3. Eclipse IDE
+官方下载：http://www.eclipse.org/downloads/
+
+
+（二）安装及配置Java环境
+
+1：安装JDK，双击打开，按提示一步一步至安装完毕。
+
+2：设置环境变量 （我的电脑->属性->高级->环境变量->系统变量中添加以下环境变量）：
+下面的值需注意分号，在最后追加：
+JAVA_HOME值为： D:\Program Files\Java\jdk*（你安装JDK的安装路径）
+CLASSPATH值为： ;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\bin
+Path： ;%JAVA_HOME%\bin
+
+
+（三）安装Android SDK
+
+Android SDK可以通过SDK下载器自动下载和配置，适合网络好的情况；也可以借助工具下载SDK文件，手工配置，适合下载速度慢的情况。
+SDK下载器自动下载步骤如下：
+解压缩android-sdk_r08-windows下载器，双击运行SDK Manager.exe：
+
+
+（四）Eclipse 集成开发环境（IDE）的搭建
+
+现在开始Eclipse IDE、Android Eclipse plugin的安装和配置，这里的例子使用的Eclipse版本为：eclipse-Java-helios-SR1-win32.zip。
+
+我们使用的Android Eclipse Plugin 是ADT ：Android Development Tools 。同Android SDK 一样，分为在线安装和手动安装两种方式。
+
+在线安装步骤如下：
+
+打开Eclipse，选择菜单：Help->Install New Software...
+
+弹出“Available Software”对话框，点击“Add...”按钮 。
+
+弹出“Add Repository”对话框。
+
+Name中输入：ADT；
+
+Location中输入：https://dl-ssl.google.com/android/eclipse/，如果不支持https可有输入http://dl-ssl.google.com/android/eclipse/。
+
+
+（五） Eclipse ADT 配置
+
+ADT 的Eclipse Plugin 安装成功之后，开始ADT 的配置，具体如下：
+
+1. Eclipse重启后，选择Window > Preferences...，在打开的属性框，选择Android，可以看到：
+
+2. 在SDK location中输入你的Android SDK所在的目录，然后按 Apply按钮 即可看到我们安装SDK包，
+
+至此，Eclipse+ADT的集成开发环境就安装配置完毕。
+
+
+（六） 配置Android SDK
+
+这里介绍下新建AVD。所谓AVD，即Android Virtual Devices，Android虚拟设备，亦即嵌入式开发中常用的模拟器。
+
+在Eclipse中选择Window-Android SDKandAVD Manager，或者在android-sdk-windows文件夹中双击SDK Manager.exe，在弹出的Android SDK and AVD Manager对话框，选择Virtual Devices，按new 按钮创建虚拟设备，其中：
+
+Target：SDK的类型
+
+SD card：SD卡的大小
+
+Skin：显示屏的类型
+
+点击“Create AVD”按钮，如果安装成功，会在“Android SDK and AVD Manager”对话框中显示。
+
+至此开发环境配置完成，接下来即可以进行Android上应用的开发。
+
+
+三、导入程序源文件：
+1.打开Eclipse；
+2.选择File-Import-General/Existing Projects into Workspace，点击next并通过Browse...按钮选择需要导入的源文件文件夹，然后点击Select All，点击Finish，便可导入项目。
+
+
+四、调试运行程序：
+选中项目文件夹，右键选择Run As--Android Application，即可在手机设备或安卓模拟器上运行本程序。

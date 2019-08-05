@@ -1,0 +1,164 @@
+﻿@model wool.Model.item
+@{
+    ViewBag.Title = "CheckItem";
+    Layout = "~/_LayoutPage1.cshtml";
+}
+
+<div class="right" id="mainFrame">
+
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>
+            <a href="#">业务处理</a>
+            <span class="divider">/</span>
+            审核资讯
+        </ul>
+        <div class="title_right"><strong>添加资讯填写</strong></div>
+        <div style="width:900px;margin:auto;">
+            <form action="@Url.Action("PassItem",new {userid=Model._User.objectId })" method="post">
+                <table class="table table-bordered">
+                    <tr>
+                        <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">资讯标题：</td>
+                        <td nowrap="nowrap">@Html.DisplayFor(model => model.title)</td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">商品购买链接：</td>
+                        <td colspan="5" nowrap="nowrap">@Html.DisplayFor(model => model.url)</td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">商城名称：</td>
+                        <td nowrap="nowrap">@Html.DisplayFor(model => model.mall_name)</td>
+                    </tr>
+                    <tr>
+                        <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">商品价格：</td>
+                        <td nowrap="nowrap">@Html.DisplayFor(model => model.price)</td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">资讯内容：</td>
+                        <td colspan="3">@Html.DisplayFor(model => model.discount)</td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">分类：</td>
+                        <td nowrap="nowrap">@Html.DisplayFor(model => model.type)</td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">发布用户：</td>
+                        <td nowrap="nowrap">@Html.DisplayFor(model => model._User.nickname)</td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">审核状态：</td>
+                        @if (Model != null)
+                        {
+                            if (@Model.state != "1")
+                            {
+                                <td nowrap="nowrap">
+                                    未审核
+                                </td>
+                            }
+                            else
+                            {
+                                <td nowrap="nowrap">
+                                    已审核
+                                </td>
+                            }
+                        }
+                    </tr>
+                </table>
+                <input type="hidden" name="objectId" value="@Html.DisplayFor(model => model.objectId)" />
+                <input type="hidden" name="createdAt" value="@Html.DisplayFor(model => model.createdAt)" />
+                <input type="hidden" name="title" value="@Html.DisplayFor(model => model.title)" />
+                <input type="hidden" name="url" value="@Html.DisplayFor(model => model.url)" />
+                <input type="hidden" name="mall_name" value="@Html.DisplayFor(model => model.mall_name)" />
+                <input type="hidden" name="price" value="@Html.DisplayFor(model => model.price)" />
+                <input type="hidden" name="discount" value="@Html.DisplayFor(model => model.discount)" />
+                <input type="hidden" name="type" value="@Html.DisplayFor(model => model.type)" />
+                <input type="hidden" name="hot" value="@Html.DisplayFor(model => model.hot)" />
+                <input type="hidden" name="love" value="@Html.DisplayFor(model => model.love)" />
+                <input type="hidden" name="reward" value="@Html.DisplayFor(model => model.reward)" />
+                <input type="hidden" name="commentCount" value="@Html.DisplayFor(model => model.commentCount)" />
+                <input type="hidden" name="_UserId" value="@Html.DisplayFor(model => model._User.objectId)" />
+                <table class="margin-bottom-20  table no-border">
+                    <tr>
+                        <td class="text-center"><input type="submit" value="通过" class="btn btn-info  " style="width:80px;" /></td>
+                    </tr>
+                </table>
+            </form>
+            <form action="@Url.Action("Failedpass",new {userid=Model._User.objectId })" method="post">
+                <div id="hidden" align="center" style="display:none">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">资讯标题：</td>
+                            <td nowrap="nowrap">@Html.DisplayFor(model => model.title)</td>
+                        </tr>
+                        <tr>
+                            <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">商品购买链接：</td>
+                            <td colspan="5" nowrap="nowrap">@Html.DisplayFor(model => model.url)</td>
+                        </tr>
+                        <tr>
+                            <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">商城名称：</td>
+                            <td nowrap="nowrap">@Html.DisplayFor(model => model.mall_name)</td>
+                        </tr>
+                        <tr>
+                            <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">商品价格：</td>
+                            <td nowrap="nowrap">@Html.DisplayFor(model => model.price)</td>
+                        </tr>
+                        <tr>
+                            <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">资讯内容：</td>
+                            <td colspan="3">@Html.DisplayFor(model => model.discount)</td>
+                        </tr>
+                        <tr>
+                            <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">分类：</td>
+                            <td nowrap="nowrap">@Html.DisplayFor(model => model.type)</td>
+                        </tr>
+                        <tr>
+                            <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">发布用户：</td>
+                            <td nowrap="nowrap">@Html.DisplayFor(model => model._User.nickname)</td>
+                        </tr>
+                        <tr>
+                            <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">审核状态：</td>
+                            @if (Model != null)
+            {
+                if (@Model.state != "1")
+                {
+                                    <td nowrap="nowrap">
+                                        未审核
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td nowrap="nowrap">
+                                        已审核
+                                    </td>
+                                }
+                            }
+                        </tr>
+                    </table>
+                    <input type="hidden" name="objectId" value="@Html.DisplayFor(model => model.objectId)" />
+                    <input type="hidden" name="createdAt" value="@Html.DisplayFor(model => model.createdAt)" />
+                    <input type="hidden" name="title" value="@Html.DisplayFor(model => model.title)" />
+                    <input type="hidden" name="url" value="@Html.DisplayFor(model => model.url)" />
+                    <input type="hidden" name="mall_name" value="@Html.DisplayFor(model => model.mall_name)" />
+                    <input type="hidden" name="price" value="@Html.DisplayFor(model => model.price)" />
+                    <input type="hidden" name="discount" value="@Html.DisplayFor(model => model.discount)" />
+                    <input type="hidden" name="type" value="@Html.DisplayFor(model => model.type)" />
+                    <input type="hidden" name="hot" value="@Html.DisplayFor(model => model.hot)" />
+                    <input type="hidden" name="love" value="@Html.DisplayFor(model => model.love)" />
+                    <input type="hidden" name="reward" value="@Html.DisplayFor(model => model.reward)" />
+                    <input type="hidden" name="commentCount" value="@Html.DisplayFor(model => model.commentCount)" />
+                    <input type="hidden" name="_UserId" value="@Html.DisplayFor(model => model._User.objectId)" />
+                    <table class="margin-bottom-20  table no-border">
+                        <tr>
+                            <td class="text-center"><input type="submit" value="通过" class="btn btn-info  " style="width:80px;" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <table class="margin-bottom-20  table no-border">
+                    <tr>
+                        <td class="text-center"><input type="submit" value="不通过" class="btn btn-info  " style="width:80px;" /></td></tr></table>
+            </form>
+            </div>
+    </div>
+</div>
+

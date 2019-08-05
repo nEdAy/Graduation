@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>口袋快取 - 工大专区</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <a></a>
+    <div id="container" class="container">
+        <header>
+            <h1>快递代取 - 工大专区</h1>
+            <p>仅限每日下午四点前提交订单可代取</p>
+            <hr>
+        </header>
+        <section>
+            <form action="success.html" method="post">
+                <label><span class="must">姓名</span><input type="text" name="name" class="short" id="name" maxlength="5"><span class="msg" id="name-msg"></span></label>
+                <label><span class="must">联系电话</span><input type="text" name="phone" class="short" id="phone" maxlength="11"><span class="msg" id="phone-msg"></span></label>
+                <label><span class="must">地址（北苑和软件园是有区别的！）</span><select id="region"><option>北苑</option><option>西苑</option><option>东苑</option><option selected>软件园</option></select></label>
+                <label><span class="must">宿舍楼（如：xx区 4号楼）</span><input type="text" name="dormitory" class="long" id="dormitory" maxlength="6"><span class="msg" id="dorm-msg"></span></label>
+                <label><span class="must">物件大小 </span><select id="size"><option selected>小件</option><option>中等</option><option>大件</option><option>信封</option></select></label>
+                <label><span class="must">今日件/昨日件 </span><select id="type"><option selected>今日</option><option>昨日</option></select></label>
+                <label><span class="must">快递公司</span><select id="com" class="long"><option select>顺丰</option><option>圆通</option><option>中通</option><option>申通</option><option>百世</option><option>韵达</option><option>天天</option><option>邮政</option><option>国通</option><option>全峰</option><option>京东</option><option>奥克米</option><option>其他</option></select></label>
+                <label><span class="must">快递信（仅限一单 奥克米请填写取货号）</span><textarea id="letter" maxlength="60"></textarea><span class="msg" id="letter-msg"></span></label>
+                <label><input type="radio" name="path" id="notUseTicket" checked><span>快递来源于口袋快爆</span><input type="radio" name="path" id="useTicket"><span>其他快递</span></label>
+                <label id="label-useTicket"><span class="must">物品订单编号（仅口袋快爆购物用户填写）</span><input type="text" name="orderId" class="long" id="orderId"><span class="msg" id="orderId-msg"></span></label>
+                <label id="label-notUseTicket"><span class="must">代取券编号（非口袋快爆购物用户填写）</span><input type="text" name="voucherId" class="long" id="voucherId" maxlength="15"><span class="msg" id="voucherId-msg"></span></label>
+                <label><span class="notMust">订单编号来源：</span></label>
+                <img src="img/show.jpg">
+                <input type="button" value="提交" onclick="toVaild()" id="submit">
+            </form>
+        </section>
+    </div>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/bmob-min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+</html>

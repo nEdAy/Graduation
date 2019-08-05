@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>口袋快爆-邀请页面</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/invite.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>快速注册</h1>
+            <p>您的好友<span class="invite-people" id="invite-people"></span>向您推荐口袋快爆</p>
+        </header><!-- end header -->
+        <section>
+            <form action="#" method="post" onsubmit="return false;">
+                <label><input type="text" id="username" class="input" placeholder="输入手机号" maxlength="11"></label>
+                <label><input type="password" id="password" class="input" placeholder="设置登录密码" maxlength="20"></label>
+                <label><input type="text" id="code" class="input code" placeholder="验证码" maxlength="4"><button id="getCode" class="getCode" type="button">点击获取</button></label>
+                <label id="tip" class="tip"></label>
+                <label><button id="register" class="register" type="submit">点击注册</button></label>
+            </form>
+        </section><!-- end section -->
+    </div><!-- end container -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/js.js"></script>
+</body>
+</html>

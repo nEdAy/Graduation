@@ -1,0 +1,47 @@
+﻿@model wool.Model.Notice
+
+@{
+   
+    Layout = "~/_LayoutPage1.cshtml";
+}
+
+
+<div class="right" id="mainFrame">
+
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>
+            <a href="#">通知公告</a>
+            <span class="divider">/</span>
+            发布通知
+        </ul>
+        <div class="title_right"><strong>发布通知填写</strong></div>
+        <div style="width:900px;margin:auto;">
+            <form method="post" action="@Url.Action("PostNotice")">
+                <table class="table table-bordered">
+                    <tr>
+                        <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">标题：</td>
+                        <td colspan="5" nowrap="nowrap"><input type="text" name="title" id="input9" class="span10" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">链接：</td>
+                        <td colspan="5" nowrap="nowrap"><input type="text" name="url" id="input9" class="span10" /></td>
+                    </tr>
+                   
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">通知内容：</td>
+                        <td colspan="3"><textarea name="contents" id="input11" class="span10"></textarea></td>
+                    </tr>
+                   
+                </table>
+                <table class="margin-bottom-20  table no-border">
+                    <tr>
+                        <td class="text-center"><input type="submit" value="发布" class="btn btn-info  " style="width:80px;" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+       
+    </div>
+</div>

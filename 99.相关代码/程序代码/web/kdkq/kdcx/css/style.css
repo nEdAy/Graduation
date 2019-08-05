@@ -1,0 +1,120 @@
+body {
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	background: #eee;
+}
+
+.container {
+	background: #fff;
+}
+
+header {
+	padding: 20px 20px;
+}
+
+header h1 {
+	text-align: center;
+	font-size: 180%;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+header label {
+	display: block;
+	text-align: center;
+}
+
+header label input {
+	text-align: center;
+	width: 50%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding: 10px 0;
+}
+
+header label button {
+	margin-top: 20px;
+	width: 50%;
+	height: 43px;
+	border-radius: 5px;
+	border: 0;
+	background: #eee;
+}
+
+.content p {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.tip-name {
+	font-size: 25px;
+	color: orange;
+}
+
+.tip-welcome {
+	font-size: 15px;
+	color: gray;
+}
+
+.info {
+	color: #000;
+	font-size: 18px;
+	box-shadow: 2px 2px #bbb;
+	width: 90%;
+	display: block;
+	margin: 10px auto;
+	background: #FFCC33;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 20px;
+}
+
+.info .state {
+	color: red;
+}
+
+.info .time {
+	font-size: 12px;
+	float: right;
+}
+
+.info .tip-orderId {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.orderId {
+	font-size: 20px;
+}
+
+.expressInfo {
+	padding-bottom: 10px;
+}
+
+.tip-max {
+	display: block;
+	text-align: center;
+	color: #ccc;
+}
+
+hr {
+	margin-bottom: 20px;
+}
+
+.tip {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.red {
+	color: red;
+}
+
+.cancel {
+	text-decoration: none;
+	color: red;
+	float: right;
+	margin-top: -10px;
+}

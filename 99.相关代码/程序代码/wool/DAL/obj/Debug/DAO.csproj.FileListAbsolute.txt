@@ -1,0 +1,11 @@
+C:\Users\s6179\Desktop\wool\DAL\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\wool.DAO.dll
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\wool.DAO.pdb
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\wool.Model.dll
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\wool.Utility.dll
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\wool.Model.pdb
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\wool.Utility.pdb
+C:\Users\s6179\Desktop\wool\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\s6179\Desktop\wool\DAL\obj\Debug\wool.DAO.dll
+C:\Users\s6179\Desktop\wool\DAL\obj\Debug\wool.DAO.pdb

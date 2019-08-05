@@ -1,0 +1,46 @@
+﻿@model IEnumerable<wool.Model._User>
+
+@{
+    Layout = "~/_LayoutPage1.cshtml";
+}
+
+
+<div class="right_cont">
+    <ul class="breadcrumb">
+        当前位置：
+        首页
+        <span class="divider">/</span>
+        用户管理
+        <span class="divider">/</span>
+        查看用户
+    </ul>
+
+    <div class="title_right"><span class="pull-right margin-bottom-5"><a class="btn btn-info btn-small" id="modal-9735581" href="#modal-container-9735581" role="button" data-toggle="modal"><i class="icon-plus icon-white"></i> 添加资讯</a></span><strong>资讯列表</strong></div>
+    <table class="table table-bordered table-striped table-hover">
+        <tbody>
+            <tr align="center">
+                <td nowrap="nowrap"><strong>账户</strong></td>
+                <td nowrap="nowrap"><strong>昵称</strong></td>
+                <td nowrap="nowrap"><strong>积分</strong></td>
+                <td nowrap="nowrap"><strong>收益余额</strong></td>
+                <td nowrap="nowrap"><strong>头像</strong></td>
+                <td nowrap="nowrap"><strong>签到</strong></td>
+                <td nowrap="nowrap"><strong>次数</strong></td>
+               
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr align="center">
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.username)</td>
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.nickname)</td>
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.credit)</td>
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.overage)</td>
+                    <td nowrap="nowrap"><img src="@Html.DisplayFor(modelItem => item.avatar)" height="50" width="50" /></td>
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.sign_in)</td>
+                    <td nowrap="nowrap">@Html.DisplayFor(modelItem => item.shake_times)</td>
+              
+                </tr>}
+        </tbody>
+    </table>
+</div>

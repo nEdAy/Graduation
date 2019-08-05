@@ -1,0 +1,70 @@
+﻿@model wool.Model.item
+@{
+    ViewBag.Title = "CheckItem";
+    Layout = "~/_LayoutPage1.cshtml";
+}
+
+<div class="right" id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>
+            <a href="#">业务处理</a>
+            <span class="divider">/</span>
+            添加资讯
+        </ul>
+        <div class="title_right"><strong>添加资讯填写</strong></div>
+        <div style="width:900px;margin:auto;">
+            <form method="post" action="@Url.Action("PutItem",new {userid=Model._User.objectId  })">
+                <table class="table table-bordered">
+                    <tr>
+                        <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">资讯标题：</td>
+                        <td colspan="5" nowrap="nowrap"><input type="text" name="title" id="input9" class="span10" value="@Html.DisplayFor(model => model.title)" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">商品购买链接：</td>
+                        <td colspan="5" nowrap="nowrap"><input type="text" name="url" id="input9" class="span10" value="@Html.DisplayFor(model => model.url)" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">商城名称：</td>
+                        <td colspan="5" nowrap="nowrap"><input type="text" name="mall_name" id="input9" class="span10" value="@Html.DisplayFor(model => model.mall_name)" /></td>
+                    </tr>
+                    <tr>
+                        <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">商品价格：</td>
+                        <td width="23%"><input type="text" name="price" id="input14" class="span1-1" value="@Html.DisplayFor(model => model.price)" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">资讯内容：</td>
+                        <td colspan="3"><textarea name="discount" id="input11" class="span10">@Html.DisplayFor(model => model.discount)</textarea></td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">分类：</td>
+                        <td nowrap="nowrap">
+                            <select name="type" id="select2" class="span1-1">
+                                <option>个护化妆</option>
+                                <option>母婴用品</option>
+                                <option>服饰鞋包</option>
+                                <option>户外运动</option>
+                                <option>家用电器</option>
+                                <option>电脑数码</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="hidden" name="objectId" value="@Html.DisplayFor(model => model.objectId)" />
+                <input type="hidden" name="createdAt" value="@Html.DisplayFor(model => model.createdAt)" />
+                <input type="hidden" name="hot" value="@Html.DisplayFor(model => model.hot)" />
+                <input type="hidden" name="love" value="@Html.DisplayFor(model => model.love)" />
+                <input type="hidden" name="reward" value="@Html.DisplayFor(model => model.reward)" />
+                <input type="hidden" name="commentCount" value="@Html.DisplayFor(model => model.commentCount)" />
+                <input type="hidden" name="_UserId" value="@Html.DisplayFor(model => model._User.objectId)" />
+                <table class="margin-bottom-20  table no-border">
+                    <tr>
+                        <td class="text-center"><input type="submit" value="提交" class="btn btn-info" style="width:80px;" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

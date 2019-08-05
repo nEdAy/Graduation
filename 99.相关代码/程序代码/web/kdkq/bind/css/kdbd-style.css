@@ -1,0 +1,121 @@
+body {
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    background: #eee;
+}
+
+.container {
+    padding: 30px 20px;
+    background: #fff;
+}
+
+
+.container header h1 {
+    font-size: 160%;
+    color: #333;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.container header p {
+    margin-top: 10px;
+    color: red;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 15px;
+}
+.must,.notMust {
+    position: relative;
+    display: block;
+    font-weight: 600;
+}
+
+.must:after {
+    content: "*";
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 10px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+input,select{
+    margin-top: 5px;
+    border: 1px solid #eee;
+    width: 100px;
+    height: 16px;
+    padding: 8px;
+}
+
+select {
+    padding: 5px;
+    height: 40px;
+}
+
+.short {
+    width: 100px;
+}
+
+.long {
+    width: 150px;
+}
+
+.verylong {
+    width: 300px;
+}
+
+.container section textarea {
+    margin-top: 5px;
+    width: 90%;
+    height: 62px;
+    padding: 8px;
+}
+
+input[id=submit] {
+    background: rgba(248,147,29,1);
+    display: block;
+    width: 50%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 20px 0;
+    height: 100%;
+    margin: 30px auto;
+}
+
+input[id=getCode] {
+    background: rgba(248,147,29,1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px 0px;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.msg {
+    display: inline-block;
+    color: red;
+    margin-left: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.blue {
+    color: blue;
+}
+
+.tip {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
